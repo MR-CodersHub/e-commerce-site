@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStore | Shopping Cart</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+        }
+
+        .cart-table th,
+        .cart-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .cart-table th {
+            background-color: var(--light-green);
+            color: var(--dark-green);
+        }
+
+        .cart-summary {
+            background: var(--gray-bg);
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            max-width: 400px;
+            margin-left: auto;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .total-row {
+            font-weight: 700;
+            font-size: 1.3rem;
+            border-top: 1px solid #ccc;
+            padding-top: 15px;
+        }
+
+        .btn-icon {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
+
+        .btn-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Wishlist Styles included in Cart */
+        .wishlist-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-leaf"></i> EcoStore
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home2</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="wishlist.html"><i class="ph ph-heart"></i></a>
+                    <a href="cart.html" class="active"><i class="ph ph-shopping-cart"></i></a>
+                    <div class="user-dropdown-container">
+                        <button class="user-dropdown-toggle"><i class="ph ph-user"></i></button>
+                        <div class="user-dropdown-menu">
+                            <a href="login.html" class="user-dropdown-item">Login / Sign Up</a>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="admin-dashboard.html" class="user-dropdown-item">Admin Dashboard</a>
+                            <a href="user-dashboard.html" class="user-dropdown-item">User Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-toggle"><i class="ph ph-list"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="section-padding" style="background: var(--light-green); padding: 60px 0;">
+        <div class="container text-center">
+            <h1 class="heading-primary">Your Shopping Cart</h1>
+        </div>
+    </div>
+
+    <!-- Cart Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div style="overflow-x: auto;">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-container">
+                        <!-- Items injected via JS -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="btn btn-primary" style="width: 100%; margin-top: 20px;">Proceed to Checkout</button>
+            </div>
+            <div style="margin-top: 20px; text-align: left;">
+                <a href="products.html" class="btn btn-outline">Continue Shopping</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishlist Header -->
+    <div class="section-padding" style="background: var(--light-green); padding: 60px 0;">
+        <div class="container text-center">
+            <h2 class="heading-primary">Your Wishlist</h2>
+        </div>
+    </div>
+
+    <!-- Wishlist Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div id="wishlist-grid" class="wishlist-container">
+                <!-- Items will be injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> EcoStore</a></h4>
+                    <p>Your one-stop destination for sustainable and organic products. Shop smart, live green.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=Electronics">Electronics</a></li>
+                        <li><a href="products.html?category=Fashion">Fashion</a></li>
+                        <li><a href="products.html?category=Home Essentials">Home & Living</a></li>
+                        <li><a href="products.html?category=Personal Care">Personal Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="ph-fill ph-envelope"></i> support@ecostore.com</li>
+                        <li><i class="ph-fill ph-phone"></i> +1 234 567 890</li>
+                        <li><i class="ph-fill ph-map-pin"></i> 123 Green Way, Eco City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 EcoStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/shop.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
+</body>
+
+</html>

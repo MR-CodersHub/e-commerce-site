@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStore | Service Details</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .service-hero {
+            background-color: var(--dark-green);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .service-details-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .detail-box {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 30px;
+        }
+
+        .feature-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .feature-list li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 15px 0;
+        }
+
+        .faq-item h4 {
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pricing-table {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .pricing-header {
+            background: var(--gray-bg);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-body {
+            padding: 20px;
+        }
+
+        .pricing-price {
+            font-size: 2rem;
+            color: var(--primary-green);
+            font-weight: 700;
+        }
+
+        .sidebar-widget {
+            background: var(--gray-bg);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .sidebar-widget h3 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary-green);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .service-details-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-leaf"></i> EcoStore
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home2</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#"><i class="ph ph-magnifying-glass"></i></a>
+                    <a href="cart.html"><i class="ph ph-shopping-cart"></i></a>
+                    <div class="user-dropdown-container">
+                        <button class="user-dropdown-toggle"><i class="ph ph-user"></i></button>
+                        <div class="user-dropdown-menu">
+                            <a href="login.html" class="user-dropdown-item">Login / Sign Up</a>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="admin-dashboard.html" class="user-dropdown-item">Admin Dashboard</a>
+                            <a href="user-dashboard.html" class="user-dropdown-item">User Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-toggle"><i class="ph ph-list"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <h1>End-to-End Ecommerce Solutions</h1>
+            <p>From product discovery to doorstep delivery, we handle it all.</p>
+        </div>
+    </section>
+
+    <!-- Details Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="service-details-content">
+                <!-- Main Content -->
+                <div class="main-content">
+                    <div class="detail-box">
+                        <h2 class="heading-primary" style="font-size: 2rem;">Overview</h2>
+                        <p>We provide a complete lifecycle management for your shopping needs. Our platform integrates
+                            state-of-the-art technology with eco-friendly logistics to ensure that you get the best
+                            products with the lowest carbon footprint.</p>
+                        <p style="margin-top: 15px;">Whether you are a buyer looking for sustainable goods or a seller
+                            aiming to reach a green-conscious audience, our solutions are tailored to bridge the gap
+                            effectively.</p>
+                    </div>
+
+                    <div class="detail-box">
+                        <h2 class="heading-primary" style="font-size: 2rem;">What's Included</h2>
+                        <ul class="feature-list">
+                            <li><strong>Easy Product Browsing:</strong> Intuitive search and filter options.</li>
+                            <li><strong>Secure Checkout:</strong> PCI-DSS compliant payment processing.</li>
+                            <li><strong>Order Tracking:</strong> Real-time GPS tracking for all deliveries.</li>
+                            <li><strong>Return & Refund Management:</strong> Hassle-free automated return portals.</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-box">
+                        <h2 class="heading-primary" style="font-size: 2rem;">Frequently Asked Questions</h2>
+                        <div class="faq-item">
+                            <h4>How do you handle returns? <i class="ph-bold ph-caret-down"></i></h4>
+                            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-light);">We offer a 30-day
+                                return policy for all unused items with original packaging.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Is shipping free? <i class="ph-bold ph-caret-down"></i></h4>
+                            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-light);">Shipping is free
+                                for orders over $50 within the continental US.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h4>Are payments secure? <i class="ph-bold ph-caret-down"></i></h4>
+                            <p style="margin-top: 10px; font-size: 0.9rem; color: var(--text-light);">Yes, we use
+                                industry-standard encryption for all transactions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h3>Pricing Plans</h3>
+
+                        <!-- Basic -->
+                        <div class="pricing-table">
+                            <div class="pricing-header">
+                                <h4>Basic</h4>
+                                <div class="pricing-price">Free</div>
+                            </div>
+                            <div class="pricing-body">
+                                <ul
+                                    style="list-style: disc; padding-left: 20px; font-size: 0.9rem; color: var(--text-light);">
+                                    <li>Browse Products</li>
+                                    <li>Basic Support</li>
+                                    <li>Standard Shipping</li>
+                                </ul>
+                                <a href="#" class="btn btn-outline" style="width: 100%; margin-top: 15px;">Select</a>
+                            </div>
+                        </div>
+
+                        <!-- Premium -->
+                        <div class="pricing-table" style="margin-top: 20px; border-color: var(--primary-green);">
+                            <div class="pricing-header" style="background: var(--light-green);">
+                                <h4>Premium</h4>
+                                <div class="pricing-price">$9.99<span
+                                        style="font-size: 1rem; color: var(--text-dark);">/mo</span></div>
+                            </div>
+                            <div class="pricing-body">
+                                <ul
+                                    style="list-style: disc; padding-left: 20px; font-size: 0.9rem; color: var(--text-light);">
+                                    <li>Priority Shipping</li>
+                                    <li>24/7 Support</li>
+                                    <li>Exclusive Deals</li>
+                                </ul>
+                                <a href="#" class="btn btn-primary" style="width: 100%; margin-top: 15px;">Select</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Need Help?</h3>
+                        <p>Contact our sales team for custom solutions.</p>
+                        <a href="contact.html" class="btn btn-primary" style="margin-top: 15px;">Contact Us</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> EcoStore</a></h4>
+                    <p>Your one-stop destination for sustainable and organic products. Shop smart, live green.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=Electronics">Electronics</a></li>
+                        <li><a href="products.html?category=Fashion">Fashion</a></li>
+                        <li><a href="products.html?category=Home Essentials">Home & Living</a></li>
+                        <li><a href="products.html?category=Personal Care">Personal Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="ph-fill ph-envelope"></i> support@ecostore.com</li>
+                        <li><i class="ph-fill ph-phone"></i> +1 234 567 890</li>
+                        <li><i class="ph-fill ph-map-pin"></i> 123 Green Way, Eco City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 EcoStore. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/mobile-nav.js"></script>
+</body>
+
+</html>

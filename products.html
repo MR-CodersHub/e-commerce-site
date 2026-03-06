@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStore | Products</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .filter-section {
+            padding: 30px 0;
+            background: var(--light-green);
+            text-align: center;
+        }
+
+        .filter-btn {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--primary-green);
+            color: var(--white);
+            border-color: var(--primary-green);
+        }
+
+        .products-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: var(--gray-bg);
+        }
+
+        .product-card {
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            background: var(--white);
+            transition: var(--transition);
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-leaf"></i> EcoStore
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home2</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="wishlist.html"><i class="ph ph-heart"></i></a>
+                    <a href="cart.html"><i class="ph ph-shopping-cart"></i></a>
+                    <div class="user-dropdown-container">
+                        <button class="user-dropdown-toggle"><i class="ph ph-user"></i></button>
+                        <div class="user-dropdown-menu">
+                            <a href="login.html" class="user-dropdown-item">Login / Sign Up</a>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="admin-dashboard.html" class="user-dropdown-item">Admin Dashboard</a>
+                            <a href="user-dashboard.html" class="user-dropdown-item">User Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-toggle"><i class="ph ph-list"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="section-padding" style="padding: 60px 0; background: var(--white);">
+        <div class="container text-center">
+            <h1 class="heading-primary">Our Current Collection</h1>
+            <p class="subtext">Explore sustainable products curated just for you.</p>
+        </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-section">
+        <div class="container">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Electronics</button>
+            <button class="filter-btn">Fashion</button>
+            <button class="filter-btn">Home Essentials</button>
+            <button class="filter-btn">Accessories</button>
+            <button class="filter-btn">Personal Care</button>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="products-grid-full">
+                <!-- ELECTRONICS -->
+                <div class="product-card" data-category="Electronics" data-id="p1" data-name="Solar Power Bank"
+                    data-price="$45.00" data-image="assets/images/prod-solar.png">
+                    <img src="assets/images/prod-solar.png" alt="Solar Power Bank">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Solar Power Bank</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$45.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Electronics" data-id="p2" data-name="Sustainable Headphones"
+                    data-price="$89.99" data-image="assets/images/prod-headphones.png">
+                    <img src="assets/images/prod-headphones.png" alt="Sustainable Headphones">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Sustainable Headphones</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star-half"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$89.99</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Electronics" data-id="p3" data-name="Eco Smart Thermostat"
+                    data-price="$129.00" data-image="assets/images/prod-solar.png">
+                    <img src="assets/images/prod-solar.png" alt="Smart Thermostat" style="filter: hue-rotate(90deg);">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Eco Smart Thermostat</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$129.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FASHION -->
+                <div class="product-card" data-category="Fashion" data-id="p4" data-name="Organic Cotton Tee"
+                    data-price="$25.00" data-image="assets/images/prod-clothing.png">
+                    <img src="assets/images/prod-clothing.png" alt="Organic Tea">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Organic Cotton Tee</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$25.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Fashion" data-id="p5" data-name="Eco Bamboo Sneakers"
+                    data-price="$65.00" data-image="assets/images/prod-sneakers.png">
+                    <img src="assets/images/prod-sneakers.png" alt="Hemp Pants">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Eco Bamboo Sneakers</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$65.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Fashion" data-id="p6" data-name="Natural Linen Shirt"
+                    data-price="$42.00" data-image="assets/images/prod-clothing.png">
+                    <img src="assets/images/prod-clothing.png" alt="Linen Shirt" style="filter: contrast(0.9);">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Natural Linen Shirt</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$42.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HOME ESSENTIALS -->
+                <div class="product-card" data-category="Home Essentials" data-id="p7" data-name="Bamboo Salad Bowl"
+                    data-price="$18.00" data-image="assets/images/prod-bamboo.png">
+                    <img src="assets/images/prod-bamboo.png" alt="Bamboo Bowl" style="object-position: left;">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Bamboo Salad Bowl</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$18.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Home Essentials" data-id="p8" data-name="Reusable Cutlery Set"
+                    data-price="$12.50" data-image="assets/images/prod-bamboo.png">
+                    <img src="assets/images/prod-bamboo.png" alt="Cutlery Set" style="object-position: right;">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Reusable Cutlery Set</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$12.50</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Home Essentials" data-id="p9" data-name="Beeswax Food Wraps"
+                    data-price="$15.00" data-image="assets/images/blog-top10.png">
+                    <img src="assets/images/blog-top10.png" alt="Beeswax Wraps"
+                        style="object-position: center; object-fit: cover;">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Beeswax Food Wraps</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$15.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACCESSORIES -->
+                <div class="product-card" data-category="Accessories" data-id="p10" data-name="Oak Wood Watch"
+                    data-price="$110.00" data-image="assets/images/prod-watch.png">
+                    <img src="assets/images/prod-watch.png" alt="Wooden Watch">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Oak Wood Watch</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$110.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Accessories" data-id="p11" data-name="Vegan Cork Wallet"
+                    data-price="$35.00" data-image="assets/images/prod-watch.png">
+                    <img src="assets/images/prod-watch.png" alt="Cork Wallet" style="filter: sepia(0.5);">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Vegan Cork Wallet</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$35.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Accessories" data-id="p12" data-name="Hemp Tote Bag"
+                    data-price="$15.50" data-image="assets/images/prod-tote.png">
+                    <img src="assets/images/prod-tote.png" alt="Hemp Tote Bag">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Hemp Tote Bag</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star-half"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$15.50</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERSONAL CARE -->
+                <div class="product-card" data-category="Personal Care" data-id="p13" data-name="Lavender Soap Bar"
+                    data-price="$8.00" data-image="assets/images/prod-soap.png">
+                    <img src="assets/images/prod-soap.png" alt="Organic Soap">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Lavender Soap Bar</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$8.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Personal Care" data-id="p14" data-name="Organic Face Cream"
+                    data-price="$32.00" data-image="assets/images/prod-face-cream.png">
+                    <img src="assets/images/prod-face-cream.png" alt="Face Oil">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Organic Face Cream</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star-half"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$32.00</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Personal Care" data-id="p15" data-name="Bamboo Toothbrush"
+                    data-price="$4.50" data-image="assets/images/blog-top10.png">
+                    <img src="assets/images/blog-top10.png" alt="Bamboo Toothbrush"
+                        style="object-position: top left; object-fit: none; width: 100%; height: 250px;">
+                    <div class="product-info" style="margin-top:15px;">
+                        <h3>Bamboo Toothbrush</h3>
+                        <div class="product-rating"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <div class="product-footer">
+                            <span class="price">$4.50</span>
+                            <div class="action-buttons">
+                                <button class="wishlist-btn"><i class="ph-bold ph-heart"></i></button>
+                                <button class="add-btn add-cart-btn"><i class="ph-bold ph-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> EcoStore</a></h4>
+                    <p>Your one-stop destination for sustainable and organic products. Shop smart, live green.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=Electronics">Electronics</a></li>
+                        <li><a href="products.html?category=Fashion">Fashion</a></li>
+                        <li><a href="products.html?category=Home Essentials">Home & Living</a></li>
+                        <li><a href="products.html?category=Personal Care">Personal Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="ph-fill ph-envelope"></i> support@ecostore.com</li>
+                        <li><i class="ph-fill ph-phone"></i> +1 234 567 890</li>
+                        <li><i class="ph-fill ph-map-pin"></i> 123 Green Way, Eco City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 EcoStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/product-filter.js"></script>
+    <script src="assets/js/shop.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
+</body>
+
+</html>

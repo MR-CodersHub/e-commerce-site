@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStore | About Us</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .page-header {
+            background-color: var(--light-green);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img img {
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mission-box {
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .roadmap {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .roadmap-item {
+            padding: 20px;
+            border-left: 2px solid var(--primary-green);
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .roadmap-item::before {
+            content: '';
+            position: absolute;
+            left: -9px;
+            top: 25px;
+            width: 16px;
+            height: 16px;
+            background: var(--white);
+            border: 2px solid var(--primary-green);
+            border-radius: 50%;
+        }
+
+        .testimonials {
+            background-color: var(--gray-bg);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .author {
+            font-weight: 700;
+            color: var(--dark-green);
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-leaf"></i> EcoStore
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home2</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="wishlist.html"><i class="ph ph-heart"></i></a>
+                    <a href="cart.html"><i class="ph ph-shopping-cart"></i></a>
+                    <div class="user-dropdown-container">
+                        <button class="user-dropdown-toggle"><i class="ph ph-user"></i></button>
+                        <div class="user-dropdown-menu">
+                            <a href="login.html" class="user-dropdown-item">Login / Sign Up</a>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="admin-dashboard.html" class="user-dropdown-item">Admin Dashboard</a>
+                            <a href="user-dashboard.html" class="user-dropdown-item">User Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-toggle"><i class="ph ph-list"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1 class="heading-primary">Who We Are</h1>
+            <p class="subtext">We are a customer-first ecommerce platform focused on quality.</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="heading-primary" style="font-size: 2.5rem;">Commited to Excellence</h2>
+                    <p>At EcoStore, we believe that shopping should be seamless, sustainable, and satisfying. We started
+                        with a simple idea: to bring nature-inspired products closer to you with the convenience of
+                        modern technology.</p>
+                    <div class="mission-box">
+                        <h3>Our Mission</h3>
+                        <p style="margin-top: 10px;">To make online shopping simple, reliable, and enjoyable for
+                            everyone while promoting sustainability and eco-friendly choices.</p>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <img src="assets/images/about-team.png" alt="Our Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey -->
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="heading-primary" style="font-size: 2.5rem;">Our Journey</h2>
+                <p class="subtext">From a small idea to a trusted marketplace</p>
+            </div>
+            <div class="roadmap">
+                <div class="roadmap-item">
+                    <h3>2024 - The Beginning</h3>
+                    <p>Started as a small startup with a vision to revolutionize eco-friendly shopping.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h3>2025 - Expanding Horizons</h3>
+                    <p>Launched our mobile platform and expanded delivery to nationwide locations.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h3>2026 - Growing Strong</h3>
+                    <p>Serving over 10k customers with a dedicated team of professionals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-padding testimonials">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="heading-primary" style="font-size: 2.5rem;">What People Say</h2>
+            </div>
+            <div class="testimonial-grid" style="margin-top: 40px;">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Smooth experience and fast delivery. The products are exactly as
+                        described and the eco-packaging is a great touch!"</p>
+                    <p class="author">- Sarah Jenkins</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Great product quality and responsive support. Had a question about my
+                        order and they resolved it in minutes."</p>
+                    <p class="author">- Michael Chen</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I love the range of organic products available. It's my go-to place for
+                        all my home essentials now."</p>
+                    <p class="author">- Emma Wilson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> EcoStore</a></h4>
+                    <p>Your one-stop destination for sustainable and organic products. Shop smart, live green.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=Electronics">Electronics</a></li>
+                        <li><a href="products.html?category=Fashion">Fashion</a></li>
+                        <li><a href="products.html?category=Home Essentials">Home & Living</a></li>
+                        <li><a href="products.html?category=Personal Care">Personal Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="ph-fill ph-envelope"></i> support@ecostore.com</li>
+                        <li><i class="ph-fill ph-phone"></i> +1 234 567 890</li>
+                        <li><i class="ph-fill ph-map-pin"></i> 123 Green Way, Eco City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 EcoStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/mobile-nav.js"></script>
+</body>
+
+</html>

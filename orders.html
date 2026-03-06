@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStore | My Orders</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        /* ---- Dashboard page scoped styles ---- */
+
+        /* Hide main site nav links on this page only */
+        body.dashboard-layout .nav-links {
+            display: none !important;
+        }
+
+        /* Clean header: brand left, hamburger right, flex aligned */
+        body.dashboard-layout .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+        }
+
+        body.dashboard-layout .navbar .logo {
+            margin-left: 0;
+        }
+
+        body.dashboard-layout .navbar .sidebar-toggle {
+            margin-right: 0;
+        }
+
+        @media (max-width: 768px) {
+            body.dashboard-layout .navbar {
+                padding: 12px 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            body.dashboard-layout .navbar {
+                padding: 8px 0;
+            }
+        }
+
+        /* Dashboard body background */
+        .dashboard-container {
+            padding: 24px 0;
+            background-color: var(--light-green);
+            width: 100%;
+            max-width: 100%;
+            min-height: unset;
+            overflow-x: hidden;
+        }
+
+        /* Two-column grid */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 30px;
+            align-items: start;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* Sidebar — sticky */
+        .sidebar {
+            background: var(--white);
+            padding: 28px 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 80px;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-menu li {
+            margin-bottom: 6px;
+        }
+
+        .sidebar-menu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-dark);
+            text-decoration: none;
+            padding: 11px 14px;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .sidebar-menu a i {
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .sidebar-menu a:hover,
+        .sidebar-menu a.active {
+            background-color: var(--light-green);
+            color: var(--primary-green);
+        }
+
+        /* Logout link */
+        .sidebar-menu .logout-link a {
+            color: #e74c3c;
+        }
+
+        .sidebar-menu .logout-link a:hover {
+            background-color: rgba(231, 76, 60, 0.08);
+            color: #c0392b;
+        }
+
+        /* Main content */
+        .main-content {
+            background: var(--white);
+            padding: 18px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            width: 100%;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        .page-header {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .orders-table th,
+        .orders-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .orders-table th {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .status-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .status-delivered {
+            background-color: #d4edda;
+            color: #155724;
+        }
+
+        .status-shipped {
+            background-color: #cce5ff;
+            color: #004085;
+        }
+
+        .status-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        /* Responsive: stack on tablet/mobile */
+        @media (max-width: 992px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                padding: 8px;
+            }
+
+            .dashboard-container {
+                padding: 8px 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .main-content {
+                padding: 4px;
+            }
+
+            .dashboard-container {
+                padding: 4px 0;
+            }
+
+            /* sidebar position handled by global off-canvas CSS */
+        }
+    </style>
+</head>
+
+<body class="dashboard-layout">
+    <div class="page-wrapper">
+        <!-- Header: dashboard version — logo only + logout -->
+        <header>
+            <div class="container">
+                <nav class="navbar">
+                    <div class="sidebar-toggle"><i class="ph ph-list"></i></div>
+                    <a href="index.html" class="logo">
+                        <i class="ph-fill ph-leaf"></i> EcoStore
+                    </a>
+                    <!-- nav-links intentionally omitted on dashboard pages -->
+                    <div class="nav-icons">
+                        <a href="cart.html"><i class="ph ph-shopping-cart"></i></a>
+                        <div class="user-dropdown-container">
+                            <button class="user-dropdown-toggle"><i class="ph ph-user"></i></button>
+                            <div class="user-dropdown-menu">
+                                <a href="login.html" class="user-dropdown-item">Login / Sign Up</a>
+                                <div class="user-dropdown-divider"></div>
+                                <a href="admin-dashboard.html" class="user-dropdown-item">Admin Dashboard</a>
+                                <a href="user-dashboard.html" class="user-dropdown-item">User Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="dashboard-container">
+            <div class="container">
+                <div class="dashboard-grid">
+                    <!-- Sidebar -->
+                    <aside class="sidebar">
+                        <ul class="sidebar-menu">
+                            <li><a href="user-dashboard.html"><i class="ph ph-house"></i> Overview</a></li>
+                            <li><a href="orders.html" class="active"><i class="ph ph-package"></i> My Orders</a></li>
+                            <li><a href="wishlist.html"><i class="ph ph-heart"></i> Wishlist</a></li>
+                            <li><a href="profile.html"><i class="ph ph-user"></i> Profile Settings</a></li>
+                            <li class="logout-link"><a href="login.html"><i class="ph ph-sign-out"></i> Logout</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- Content -->
+                    <section class="main-content">
+                        <div class="page-header">
+                            <h2>My Orders</h2>
+                            <p style="color: var(--text-light);">View and track all your recent purchases.</p>
+                        </div>
+
+                        <div style="overflow-x: auto;">
+                            <table class="orders-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-8821</td>
+                                        <td>Oct 12, 2024</td>
+                                        <td>$124.50</td>
+                                        <td><span class="status-badge status-delivered">Delivered</span></td>
+                                        <td><a href="#" style="color: var(--primary-green);">View Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-8815</td>
+                                        <td>Oct 05, 2024</td>
+                                        <td>$45.00</td>
+                                        <td><span class="status-badge status-shipped">Shipped</span></td>
+                                        <td><a href="#" style="color: var(--primary-green);">View Details</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-8799</td>
+                                        <td>Sep 28, 2024</td>
+                                        <td>$89.99</td>
+                                        <td><span class="status-badge status-delivered">Delivered</span></td>
+                                        <td><a href="#" style="color: var(--primary-green);">View Details</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer style="background: var(--dark-green); color: var(--white); padding: 40px 0; text-align: center;">
+            <div class="container">
+                <p>&copy; 2026 EcoStore. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/mobile-nav.js"></script>
+</body>
+
+</html>
