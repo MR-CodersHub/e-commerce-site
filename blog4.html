@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStore | Top 10 Eco-Friendly Products</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .blog-detail-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .post-featured-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .post-content h2,
+        .post-content h3 {
+            color: var(--dark-green);
+            margin: 20px 0 10px;
+        }
+
+        .post-content p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .post-content ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .post-content li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+
+        .search-btn {
+            padding: 10px 15px;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-list li a {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .recent-post {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .recent-post img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            background: #eee;
+        }
+
+        @media (max-width: 768px) {
+            .blog-detail-container {
+                grid-template-columns: 1fr;
+            }
+
+            .post-featured-img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-leaf"></i> EcoStore
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home2</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#"><i class="ph ph-magnifying-glass"></i></a>
+                    <a href="cart.html"><i class="ph ph-shopping-cart"></i></a>
+                    <div class="user-dropdown-container">
+                        <button class="user-dropdown-toggle"><i class="ph ph-user"></i></button>
+                        <div class="user-dropdown-menu">
+                            <a href="login.html" class="user-dropdown-item">Login / Sign Up</a>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="admin-dashboard.html" class="user-dropdown-item">Admin Dashboard</a>
+                            <a href="user-dashboard.html" class="user-dropdown-item">User Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-toggle"><i class="ph ph-list"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="blog-detail-container">
+                <!-- Main Content -->
+                <article>
+                    <h1 class="heading-primary" style="font-size: 2.5rem; margin-bottom: 20px;">Huge Savings on Spring
+                        Collection</h1>
+                    <div class="blog-meta"
+                        style="margin-bottom: 20px; display: flex; gap: 20px; color: var(--text-light);">
+                        <span><i class="ph ph-calendar"></i> Jan 28, 2026</span>
+                        <span><i class="ph ph-user"></i> By Admin</span>
+                        <span><i class="ph ph-tag"></i> Offers</span>
+                    </div>
+
+                    <img src="assets/images/prod-tote.png" alt="Featured Image" class="post-featured-img">
+
+                    <div class="post-content">
+                        <p>As we move further into 2026, the demand for sustainable alternatives continues to grow.
+                            We've tested hundreds of products to bring you the top 10 eco-friendly essentials that
+                            combine quality, durability, and environmental responsibility.</p>
+
+                        <h2>1. Solar Power Bank</h2>
+                        <p>Keep your devices charged on the go with the power of the sun. Compact, durable, and
+                            essential for the modern traveler.</p>
+
+                        <h2>2. Bamboo Toothbrush Set</h2>
+                        <p>Say goodbye to plastic waste. These biodegradable brushes are just as effective and look
+                            great in your bathroom.</p>
+
+                        <h2>3. Beeswax Food Wraps</h2>
+                        <p>The perfect alternative to plastic cling wrap. Washable, reusable, and compostable.</p>
+
+                        <h2>4. Recycled Sneaker Collection</h2>
+                        <p>Step out in style with shoes made from ocean plastics and recycled rubber.</p>
+
+                        <h3>Why Switch Now?</h3>
+                        <p>Switching to these products not only reduces landfill waste but also supports companies that
+                            are actively working to clean up our planet. It's a vote for a better future with every
+                            purchase.</p>
+
+                        <blockquote>
+                            "Small changes, when multiplied by millions of people, can transform the world."
+                        </blockquote>
+
+                        <h2>Conclusion</h2>
+                        <p>Ready to make the switch? Check out our Products page to find these items and more. Let's
+                            make 2026 the greenest year yet.</p>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h3>Search</h3>
+                        <form class="search-form">
+                            <input type="text" class="search-input" placeholder="Search...">
+                            <button type="button" class="search-btn"><i
+                                    class="ph-bold ph-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="sidebar-list">
+                            <li><a href="#">Lifestyle <span>(5)</span></a></li>
+                            <li><a href="#">Products <span>(8)</span></a></li>
+                            <li><a href="#">News <span>(3)</span></a></li>
+                            <li><a href="#">Tips & Tricks <span>(12)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Recent Posts</h3>
+                        <div class="recent-post">
+                            <img src="assets/images/blog-recycling.png" alt="Recycling" style="object-fit: cover;">
+                            <div>
+                                <h4 style="font-size: 0.9rem;"><a href="#">Recycling Guide</a></h4>
+                                <span style="font-size: 0.8rem; color: #999;">Jan 25, 2026</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <img src="assets/images/blog-1.png" alt="Living" style="object-fit:cover;">
+                            <div>
+                                <h4 style="font-size: 0.9rem;"><a href="#">Sustainable Living</a></h4>
+                                <span style="font-size: 0.8rem; color: #999;">Jan 20, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> EcoStore</a></h4>
+                    <p>Your one-stop destination for sustainable and organic products. Shop smart, live green.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=Electronics">Electronics</a></li>
+                        <li><a href="products.html?category=Fashion">Fashion</a></li>
+                        <li><a href="products.html?category=Home Essentials">Home & Living</a></li>
+                        <li><a href="products.html?category=Personal Care">Personal Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="ph-fill ph-envelope"></i> support@ecostore.com</li>
+                        <li><i class="ph-fill ph-phone"></i> +1 234 567 890</li>
+                        <li><i class="ph-fill ph-map-pin"></i> 123 Green Way, Eco City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 EcoStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/mobile-nav.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoStore | Blog Details</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .blog-detail-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .post-featured-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+        .post-content h2,
+        .post-content h3 {
+            color: var(--dark-green);
+            margin: 20px 0 10px;
+        }
+
+        .post-content p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .post-content ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .post-content li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar-widget {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+        }
+
+        .search-btn {
+            padding: 10px 15px;
+            background: var(--primary-green);
+            color: var(--white);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .sidebar-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .sidebar-list li a {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .recent-post {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .recent-post img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            background: #eee;
+        }
+
+        @media (max-width: 768px) {
+            .blog-detail-container {
+                grid-template-columns: 1fr;
+            }
+
+            .post-featured-img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <i class="ph-fill ph-leaf"></i> EcoStore
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="home2.html">Home2</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#"><i class="ph ph-magnifying-glass"></i></a>
+                    <a href="cart.html"><i class="ph ph-shopping-cart"></i></a>
+                    <div class="user-dropdown-container">
+                        <button class="user-dropdown-toggle"><i class="ph ph-user"></i></button>
+                        <div class="user-dropdown-menu">
+                            <a href="login.html" class="user-dropdown-item">Login / Sign Up</a>
+                            <div class="user-dropdown-divider"></div>
+                            <a href="admin-dashboard.html" class="user-dropdown-item">Admin Dashboard</a>
+                            <a href="user-dashboard.html" class="user-dropdown-item">User Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-toggle"><i class="ph ph-list"></i></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Post Content -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="blog-detail-container">
+                <!-- Main Content -->
+                <article>
+                    <h1 class="heading-primary" style="font-size: 2.5rem; margin-bottom: 20px;">The Ultimate Guide to
+                        Sustainable Living</h1>
+                    <div class="blog-meta"
+                        style="margin-bottom: 20px; display: flex; gap: 20px; color: var(--text-light);">
+                        <span><i class="ph ph-calendar"></i> Jan 28, 2026</span>
+                        <span><i class="ph ph-user"></i> By Admin</span>
+                        <span><i class="ph ph-tag"></i> Lifestyle</span>
+                    </div>
+
+                    <img src="assets/images/blog-1.png" alt="Featured Image" class="post-featured-img">
+
+                    <div class="post-content">
+                        <p>Living sustainably is not just a trend; it's a necessity for the future of our planet. In
+                            this guide, we'll explore practical steps you can take to reduce your environmental impact
+                            without sacrificing comfort.</p>
+
+                        <h2>Why It Matters</h2>
+                        <p>Every small action counts. From the products we buy to the food we eat, our choices have a
+                            ripple effect on the ecosystem. By choosing eco-friendly alternatives, we support ethical
+                            practices and reduce waste.</p>
+
+                        <h3>Simple Swaps for Your Home</h3>
+                        <ul>
+                            <li><strong>Reusable Bags:</strong> Ditch single-use plastic for cotton or jute bags.</li>
+                            <li><strong>Bamboo Toothbrushes:</strong> A biodegradable alternative to plastic brushes.
+                            </li>
+                            <li><strong>Glass Containers:</strong> Better for storage and free from harmful chemicals.
+                            </li>
+                            <li><strong>LED Bulbs:</strong> Save energy and last longer than traditional bulbs.</li>
+                        </ul>
+
+                        <h2>The Impact of Fast Fashion</h2>
+                        <p>One of the biggest contributors to pollution is the fashion industry. Opting for quality over
+                            quantity, buying second-hand, or choosing brands that prioritize sustainability can make a
+                            huge difference.</p>
+
+                        <blockquote>
+                            "We do not inherit the earth from our ancestors; we borrow it from our children."
+                        </blockquote>
+
+                        <h2>Conclusion</h2>
+                        <p>Start small. You don't have to change everything overnight. Pick one area of your life to
+                            improve today, and build from there. Together, we can create a greener future.</p>
+                    </div>
+                </article>
+
+                <!-- Sidebar -->
+                <aside>
+                    <div class="sidebar-widget">
+                        <h3>Search</h3>
+                        <form class="search-form">
+                            <input type="text" class="search-input" placeholder="Search...">
+                            <button type="button" class="search-btn"><i
+                                    class="ph-bold ph-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Categories</h3>
+                        <ul class="sidebar-list">
+                            <li><a href="#">Lifestyle <span>(5)</span></a></li>
+                            <li><a href="#">Products <span>(8)</span></a></li>
+                            <li><a href="#">News <span>(3)</span></a></li>
+                            <li><a href="#">Tips & Tricks <span>(12)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3>Recent Posts</h3>
+                        <div class="recent-post">
+                            <img src="" alt="" style="background: #ccc;">
+                            <div>
+                                <h4 style="font-size: 0.9rem;"><a href="#">Eco-Friendly Xmas</a></h4>
+                                <span style="font-size: 0.8rem; color: #999;">Dec 24, 2025</span>
+                            </div>
+                        </div>
+                        <div class="recent-post">
+                            <img src="" alt="" style="background: #ccc;">
+                            <div>
+                                <h4 style="font-size: 0.9rem;"><a href="#">Zero Waste Kitchen</a></h4>
+                                <span style="font-size: 0.8rem; color: #999;">Jan 05, 2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4><a href="index.html" class="logo"><i class="ph-fill ph-leaf"></i> EcoStore</a></h4>
+                    <p>Your one-stop destination for sustainable and organic products. Shop smart, live green.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="home2.html">Home2</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html?category=Electronics">Electronics</a></li>
+                        <li><a href="products.html?category=Fashion">Fashion</a></li>
+                        <li><a href="products.html?category=Home Essentials">Home & Living</a></li>
+                        <li><a href="products.html?category=Personal Care">Personal Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="ph-fill ph-envelope"></i> support@ecostore.com</li>
+                        <li><i class="ph-fill ph-phone"></i> +1 234 567 890</li>
+                        <li><i class="ph-fill ph-map-pin"></i> 123 Green Way, Eco City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 EcoStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/mobile-nav.js"></script>
+</body>
+
+</html>
